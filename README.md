@@ -4,7 +4,7 @@ Copiado por linorekingames de ChatGPT
 
 .............Requisitos.............
 
--Python:sino tienes python instalado sigue los pasos de https://www.python.org/downloads/
+-Python: Sino tienes python instalado sigue los pasos de https://www.python.org/downloads/
 
 
 ............Como se usa.............
