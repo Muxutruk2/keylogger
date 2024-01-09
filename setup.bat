@@ -22,7 +22,9 @@ echo 3. open offline IPGrabber (logs in public_ip.txt locally) 3
 echo 4. exit
 
 ::install Python
-xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311
+echo Installing Python...
+xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311>nul
+echo Finished
 
 set PYTHON= %APPDATA%\..\Local\Programs\Python\Python311\python.exe
 
