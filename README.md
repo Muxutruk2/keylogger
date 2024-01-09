@@ -1,14 +1,14 @@
-Creditos a bernardo por ayudar a ChatGPT
+# Keylogger
 
-Copiado por linorekingames de ChatGPT
+This Python script is a simple keylogger that captures and logs keyboard inputs. It utilizes the `keyboard` library to hook into the keyboard events and record the pressed keys. The captured keys are then printed to the console and saved to a text file for later analysis.
 
-.............Requisitos.............
+## Usage
 
--Python: Sino tienes python instalado sigue los pasos de https://www.python.org/downloads/
+1. Run the Python script `keylogger.py`.
+2. The keylogger will start capturing keyboard inputs.
+3. Press any key to record it.
+4. The captured keys will be printed to the console and saved in a text file.
 
-
-............Como se usa.............
-
-primero descargar el keylogger.py y ejecutalo en tu (no me acuerdo del nombre) de confianza
-procedemos a editar el codigo y en el apartado GMAIL
-ponemos el email el cual envie el codigo y el cual queremos que lo reciva
+```bash
+# Example command
+$ python keylogger.py
